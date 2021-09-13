@@ -28,7 +28,6 @@ export default class RESTcontainer extends Component {
 
   render() {
     const { url, method, body, response } = this.state;
-    console.log(this.state);
     return (
       <>
         <Request
