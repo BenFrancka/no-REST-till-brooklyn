@@ -8,19 +8,38 @@ export default class RESTcontainer extends Component {
     method: '',
     url: '',
     body: '',
-    response: '',
+    response: {
+      'Submit a request': 'imput a url, select a method, and click the button',
+    },
   };
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleSubmit = async (event) => {
+  handleSubmit = (event) => {
     event.preventDefault();
     const { url, method, body } = this.state;
 
-    await fetchApiEndpoint(url, method, body).then((response) =>
-      this.setState({ response })
+    fetchApiEndpoint(url, method, body).then((response =>
+      this.setState({ response }))
     );
   };
+
+  render() {
+    const { url, method, body, response } = this.state;
+    console.log(this.state);
+    return (
+      <div>
+        <Request
+          url={url}
+          method={method}
+          body={body}
+          onChange={this.handleChange}
+          onSubmit={this.handleSubmit}
+        />
+        <Response response={response} />
+      </div>
+    );
+  }
 }

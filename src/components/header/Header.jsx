@@ -1,7 +1,8 @@
 import React from 'react';
+import './Header.css';
 
 const Header = () => {
-  return <header>No REST till Brooklyn</header>;
+  return <header>NoRESTtillBrooklyn</header>;
 };
 
 export default Header;

@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Request.css';
 
-const Request = ({ url, method, body, onChange, onSubmit }) => {
+const Request = ({ url, body, onChange, onSubmit }) => {
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="request">
         <label htmlFor="url"></label>
         <input
           aria-label="url"
@@ -15,20 +16,19 @@ const Request = ({ url, method, body, onChange, onSubmit }) => {
           value={url}
           onChange={onChange}
         />
-        <div>
+        <div className="buttons">
           <label htmlFor="get">GET</label>
           <input
-            aria-label="get"
+            aria-label="method"
             type="radio"
             value="GET"
             id="get"
             name="method"
             onChange={onChange}
-            checked={method === 'get'}
           />
           <label htmlFor="post">POST</label>
           <input
-            aria-label="post"
+            aria-label="method"
             type="radio"
             value="POST"
             id="post"
@@ -37,7 +37,7 @@ const Request = ({ url, method, body, onChange, onSubmit }) => {
           />
           <label htmlFor="put">PUT</label>
           <input
-            aria-label="put"
+            aria-label="method"
             type="radio"
             value="PUT"
             id="put"
@@ -46,7 +46,7 @@ const Request = ({ url, method, body, onChange, onSubmit }) => {
           />
           <label htmlFor="patch">PATCH</label>
           <input
-            aria-label="patch"
+            aria-label="method"
             type="radio"
             value="PATCH"
             id="patch"
@@ -55,17 +55,17 @@ const Request = ({ url, method, body, onChange, onSubmit }) => {
           />
           <label htmlFor="delete">DELETE</label>
           <input
-            aria-label="delete"
+            aria-label="method"
             type="radio"
             value="DELETE"
             id="delete"
             name="method"
             onChange={onChange}
           />
+          <button aria-label="request">Make Request</button>
         </div>
-        <button aria-label="request">Make Request</button>
         <textarea 
-          placeholder="JSON response"
+          placeholder="JSON request"
           rows="10"
           cols="50"
           name="body"
@@ -78,7 +78,6 @@ const Request = ({ url, method, body, onChange, onSubmit }) => {
 
 Request.propTypes = {
   url: PropTypes.string.isRequired,
-  method: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
