@@ -30,7 +30,7 @@ export default class RESTcontainer extends Component {
     const { url, method, body, response } = this.state;
     console.log(this.state);
     return (
-      <div>
+      <>
         <Request
           url={url}
           method={method}
@@ -39,7 +39,7 @@ export default class RESTcontainer extends Component {
           onSubmit={this.handleSubmit}
         />
         <Response response={response} />
-      </div>
+      </>
     );
   }
 }

@@ -1,8 +1,9 @@
 header {
-    background-color: darkblue;
+    background-color: rgb(38, 38, 121);
     color: lightgray;
     font-size: 2.5rem;
     margin-bottom: 0.5%;
     padding: 2%;
+    width: 100%;
 }
 
