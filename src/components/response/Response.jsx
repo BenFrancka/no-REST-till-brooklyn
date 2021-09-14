@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import './Response.css';
 
 const Response = ({ response }) => {
-  console.log(response);
   return (
     <article aria-label= "response" className="response">
       <ReactJson src={response} />

@@ -49,6 +49,7 @@ describe('RESTcontainer', () => {
     const requestButton = await screen.findByRole('button', {
       name: 'request',
     });
+    
     userEvent.click(requestButton);
 
     const response = await screen.findByRole('article', { name: 'response' });
