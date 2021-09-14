@@ -168,7 +168,7 @@ exports[`RESTcontainer takes a url, method selection, and optional request body 
                       style="cursor: default;"
                     >
                       "
-                      imput a url, select a method, and click the button
+                      input a url, select a method, and click the button
                       "
                     </span>
                   </div>
