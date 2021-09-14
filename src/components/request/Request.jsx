@@ -64,13 +64,14 @@ const Request = ({ url, body, onChange, onSubmit }) => {
           />
           <button aria-label="request">Make Request</button>
         </div>
-        <textarea 
+        <textarea
           placeholder="JSON request"
           rows="10"
           cols="50"
           name="body"
           value={body}
-          onChange={onChange}></textarea>
+          onChange={onChange}
+        ></textarea>
       </form>
     </>
   );
