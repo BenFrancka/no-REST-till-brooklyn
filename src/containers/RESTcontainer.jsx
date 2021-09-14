@@ -9,7 +9,7 @@ export default class RESTcontainer extends Component {
     url: '',
     body: '',
     response: {
-      'Submit a request': 'imput a url, select a method, and click the button',
+      'Submit a request': 'input a url, select a method, and click the button',
     },
   };
 
