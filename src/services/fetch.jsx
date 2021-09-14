@@ -1,5 +1,5 @@
 export const fetchApiEndpoint = (url, method, body) => {
-  if(method === 'GET') {
+  if(method === 'GET' || method === 'DELETE') {
     return fetch(url).then((res) => res.json());
   }
   return fetch(url, {
